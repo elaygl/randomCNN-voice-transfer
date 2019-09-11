@@ -8,6 +8,8 @@ import time
 import math
 cuda = True if torch.cuda.is_available() else False
 
+if cuda:
+    print("using cuda")
 
 basepath = "input/"
 
