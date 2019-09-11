@@ -11,8 +11,8 @@ cuda = True if torch.cuda.is_available() else False
 
 basepath = "input/"
 
-CONTENT_FILENAME = basepath + "boy18.wav"
-STYLE_FILENAME = basepath + "girl52.wav"
+CONTENT_FILENAME = basepath + "elay.wav"
+STYLE_FILENAME = basepath + "elad.wav"
 
 a_content, sr = wav2spectrum(CONTENT_FILENAME)
 a_style, sr = wav2spectrum(STYLE_FILENAME)
@@ -94,7 +94,7 @@ for epoch in range(1, num_epochs + 1):
 
 
 gen_spectrum = a_G_var.cpu().data.numpy().squeeze()
-gen_audio_C = "boy18_to_girl52.wav"
+gen_audio_C = "elay_to_elad.wav"
 spectrum2wav(gen_spectrum, sr, gen_audio_C)
 
 plt.figure()
