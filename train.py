@@ -13,8 +13,8 @@ if cuda:
 
 basepath = "input/"
 
-CONTENT_FILENAME = basepath + "asaf.wav"
-STYLE_FILENAME = basepath + "asaf_to_uri.wav"
+CONTENT_FILENAME = basepath + "asaf_to_uri.wav"
+STYLE_FILENAME = basepath + "uri.wav"
 
 a_content, sr = wav2spectrum(CONTENT_FILENAME)
 a_style, sr = wav2spectrum(STYLE_FILENAME)
