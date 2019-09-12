@@ -13,8 +13,8 @@ if cuda:
 
 basepath = "input/"
 
-CONTENT_FILENAME = basepath + "asaf_to_uri.wav"
-STYLE_FILENAME = basepath + "uri.wav"
+CONTENT_FILENAME = basepath + "asaf_to_uri2.wav"
+STYLE_FILENAME = basepath + "uri2.wav"
 
 a_content, sr = wav2spectrum(CONTENT_FILENAME)
 a_style, sr = wav2spectrum(STYLE_FILENAME)
@@ -96,7 +96,7 @@ for epoch in range(1, num_epochs + 1):
 
 
 gen_spectrum = a_G_var.cpu().data.numpy().squeeze()
-gen_audio_C = "asaf_to_uri2.wav"
+gen_audio_C = "asaf_to_uri3.wav"
 spectrum2wav(gen_spectrum, sr, gen_audio_C)
 
 plt.figure()
